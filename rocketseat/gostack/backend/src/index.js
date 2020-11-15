@@ -25,9 +25,10 @@ function validateProjectId(request, response, next) {
 }
 
 app.use(LogRequest);
+app.use('/projects/:id', validateProjectId);
 
 app.get("/", (request, response) => {
-    return response.json({ message: "Hello world" });
+    return response.status(204);
 })
 
 app.get("/projects", (request, response) => {
