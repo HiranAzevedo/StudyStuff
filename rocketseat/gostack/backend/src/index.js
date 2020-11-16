@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors')
 const { v4: uuidv4, isUuid } = require("uuid");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const projects = [];
@@ -28,7 +30,7 @@ app.use(LogRequest);
 app.use('/projects/:id', validateProjectId);
 
 app.get("/", (request, response) => {
-    return response.status(204);
+    return response.status(204).send();
 })
 
 app.get("/projects", (request, response) => {
