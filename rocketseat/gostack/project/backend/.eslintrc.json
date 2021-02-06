@@ -27,6 +27,7 @@
             }
         ],
         "no-console": "off",
+        "class-methods-use-this": "off",
         "no-restricted-syntax": [
             "error",
             {
