@@ -1,4 +1,10 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+    Column,
+    Entity,
+    PrimaryGeneratedColumn,
+    CreateDateColumn,
+    UpdateDateColumn,
+} from 'typeorm';
 
 @Entity('appointments')
 class Appointment {
@@ -10,6 +16,12 @@ class Appointment {
 
     @Column('timestamp with time zone')
     date: Date;
+
+    @CreateDateColumn()
+    CreatedAt: Date;
+
+    @UpdateDateColumn()
+    UpdatedAt: Date;
 
     // constructor({ provider, date }: Omit<Appointment, 'id'>) {
     //     this.provider = provider;
