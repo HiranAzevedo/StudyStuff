@@ -1,3 +1,0 @@
-var myPromise = function(){
-    
-}
