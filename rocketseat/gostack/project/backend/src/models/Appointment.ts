@@ -28,7 +28,7 @@ class Appointment {
     created_at: Date;
 
     @UpdateDateColumn()
-    Updated_at: Date;
+    updated_at: Date;
 
     // constructor({ provider, date }: Omit<Appointment, 'id'>) {
     //     this.provider = provider;
